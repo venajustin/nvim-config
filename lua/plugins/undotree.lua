@@ -6,7 +6,7 @@ return {
     keys = {
         {
             "<leader>u",
-            "<cmd>UndotreeToggle<cr>",
+            "<cmd>UndotreeToggle<cr><cmd>UndotreeFocus<cr>",
             desc = "Undotree menu",
         }
     }

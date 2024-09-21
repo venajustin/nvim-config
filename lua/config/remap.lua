@@ -20,6 +20,7 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 vim.keymap.set("x", "<leader>pp", [["_dP]])
+vim.keymap.set("n", "<leader>pp", [["0p]])
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
@@ -32,7 +33,7 @@ vim.keymap.set("n", "<C-b>", "<C-v>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>ff", "gg=G<C-o>") 
+vim.keymap.set("n", "<leader>ff", "gg=G<C-o>")
 
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
