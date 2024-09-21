@@ -32,7 +32,7 @@ vim.keymap.set("n", "<C-b>", "<C-v>")
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-vim.keymap.set("n", "<leader>f", "gg=G<C-o>") 
+vim.keymap.set("n", "<leader>ff", "gg=G<C-o>") 
 
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
