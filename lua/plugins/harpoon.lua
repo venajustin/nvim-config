@@ -9,7 +9,10 @@ return {
         { "<leader>3", nil, desc = "Jump to page 3" },
         { "<leader>4", nil, desc = "Jump to page 4" },
     },
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+        {"nvim-lua/plenary.nvim"},
+        {"vhyrro/luarocks.nvim", priority = 1000, config = true,},
+    },
     config = function() 
         local mark = require("harpoon.mark")
         local ui = require("harpoon.ui")
