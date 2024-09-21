@@ -38,4 +38,9 @@ require("lazy").setup({
 
 
 -- after 
-vim.cmd [[colorscheme moonfly]]
+
+
+-- Favorite schemes
+-- > moonfly : hard black background
+-- > 
+vim.cmd [[colorscheme oxocarbon]]

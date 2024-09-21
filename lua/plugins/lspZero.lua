@@ -22,6 +22,7 @@ return {
         config = function()
             local cmp = require('cmp')
 
+
             cmp.setup({
                 sources = {
                     { name = 'nvim_lsp' },
@@ -80,7 +81,9 @@ return {
             })
 
             require('mason-lspconfig').setup({
-                ensure_installed = { "lua_ls", "clangd" },
+                -- Language server
+                ensure_installed = { "lua_ls", "clangd", "jdtls" },
+
                 handlers = {
                     -- this first function is the "default handler"
                     -- it applies to every language server without a "custom handler"
@@ -90,5 +93,11 @@ return {
                 }
             })
         end
+
+
+
+
+
+
     }
 }
