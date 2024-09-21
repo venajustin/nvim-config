@@ -11,7 +11,7 @@ return {
             desc = "Search Filenames in Active Dir",
         },
         {
-            "<leader>pd", 
+            "<leader>pc", 
             function()
                 require('telescope.builtin').grep_string(
                 {
@@ -21,7 +21,7 @@ return {
             desc = "Grep Search",
         },
         {
-            "<leader>pc", 
+            "<leader>pd", 
             "<cmd>Telescope git_files<cr>",
             desc = "Search Filenames in Git Repo",
         },
