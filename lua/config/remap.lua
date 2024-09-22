@@ -13,12 +13,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-
--- greatest remap ever
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
-
 vim.keymap.set("x", "<leader>pp", [["_dP]])
 vim.keymap.set("n", "<leader>pp", [["0p]])
 
