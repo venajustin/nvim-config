@@ -28,7 +28,6 @@ return {
                     { name = 'nvim_lsp' },
                 },
 
-
                 -- TODO: try with diff mapping here  i like C-n C-p
                 mapping = cmp.mapping.preset.insert({
                     ['<C-Space>'] = cmp.mapping.complete(),

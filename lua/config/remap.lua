@@ -39,6 +39,26 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 
+-- open current file with windows exploerer
+vim.keymap.set("n", "<leader>poo", [[:!explorer.exe "<C-r>%"<CR>]])
 
 
+-- terminal escape and navigate all windows with Alt-hjkl
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+-- C-R paste in term
+vim.keymap.set("t", "<expr><C-R>", "'<C-\\><C-N>\"'.nr2char(getchar()).'pi'")
+
+vim.keymap.set("t", "<A-h>", "<C-\\><C-N><C-w>h" )
+vim.keymap.set("t", "<A-j>", "<C-\\><C-N><C-w>j" )
+vim.keymap.set("t", "<A-k>", "<C-\\><C-N><C-w>k" )
+vim.keymap.set("t", "<A-l>", "<C-\\><C-N><C-w>l" )
+vim.keymap.set("i", "<A-h>", "<C-\\><C-N><C-w>h" )
+vim.keymap.set("i", "<a-j>", "<c-\\><c-n><c-w>j" )
+vim.keymap.set("i", "<A-k>", "<C-\\><C-N><C-w>k" )
+vim.keymap.set("i", "<A-l>", "<C-\\><C-N><C-w>l" )
+vim.keymap.set("n", "<A-h>", "<C-w>h" )
+vim.keymap.set("n", "<A-j>", "<C-w>j" )
+vim.keymap.set("n", "<A-k>", "<C-w>k" )
+vim.keymap.set("n", "<A-l>", "<C-w>l" )
 
