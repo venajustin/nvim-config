@@ -84,7 +84,7 @@ return {
 
             require('mason-lspconfig').setup({
                 -- Language server
-                ensure_installed = { "lua_ls", "clangd", "jdtls", "html", "cssls", "tailwindcss", "biome" },
+                ensure_installed = { "lua_ls", "jdtls", },
 
                 handlers = {
                     -- this first function is the "default handler"
@@ -92,6 +92,7 @@ return {
                     function(server_name)
                         require('lspconfig')[server_name].setup({})
                     end,
+                    --[[
                     clangd = function()
                         require('lspconfig').clangd.setup({
                             cmd = {
@@ -100,6 +101,7 @@ return {
                             }
                         })
                     end,
+                    ]]--
                 }
 
 
