@@ -33,6 +33,7 @@ return {
                     ['<C-Space>'] = cmp.mapping.complete(),
                     ['<C-u>'] = cmp.mapping.scroll_docs(-4),
                     ['<C-d>'] = cmp.mapping.scroll_docs(4),
+                    ['<C-t>'] = cmp.mapping.abort(),
                 }),
                 snippet = {
                     expand = function(args)
@@ -84,7 +85,7 @@ return {
 
             require('mason-lspconfig').setup({
                 -- Language server
-                ensure_installed = { "lua_ls", "clangd", "jdtls", "html", "cssls", "tailwindcss", "biome" },
+                ensure_installed = { "lua_ls", "clangd", "jdtls", "html", "cssls", "pylsp",  },
 
                 handlers = {
                     -- this first function is the "default handler"
@@ -96,6 +97,7 @@ return {
                         require('lspconfig').clangd.setup({
                             cmd = {
                                 "clangd",
+                         --       "--background-index",
                                 "--fallback-style=webkit"
                             }
                         })
