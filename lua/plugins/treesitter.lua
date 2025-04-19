@@ -20,6 +20,7 @@ return {
                 "html",
                 "css",
                 "cmake",
+                "glsl",
             }
         })
         vim.cmd([[TSEnable highlight]])

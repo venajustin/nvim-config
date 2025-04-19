@@ -48,6 +48,21 @@ return {
         'neovim/nvim-lspconfig',
         cmd = { 'LspInfo', 'LspInstall', 'LspStart' },
         event = { 'BufReadPre', 'BufNewFile' },
+--        keys = { -- just setting descriptions
+--            { 'K', nil, desc = "Hover Info" },
+--            { 'gd', nil, desc = "Go Definition" },
+--            { 'gD', nil, desc = "Go Declaration" },
+--            { 'gi', nil, desc = "Go Implementation" },
+--            { 'go', nil, desc = "Go Type Definition" },
+--            { 'gr', nil, desc = "Go References" },
+--            { 'gs', nil, desc = "Signature Help" },
+--            { 'gn', nil, desc = "Go Previous Error" },
+--            { 'gp', nil, desc = "Go Next Error" },
+--            { 'gi', nil, desc = "Float Info" },
+--            { '<leader>rr', nil, desc = "LSP Rename" },
+--            { '<leader>fd', nil, desc = "LSP Format" },
+--            { '<leader>gg', nil, desc = "Code Action" },
+--        },
         dependencies = {
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'williamboman/mason.nvim' },
@@ -64,13 +79,13 @@ return {
                 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
                 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
                 vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-                vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+                vim.keymap.set('n', 'ga', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
                 vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
                 vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
                 vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
                 vim.keymap.set('n', 'gn', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opts)
                 vim.keymap.set('n', 'gp', '<cmd>lua vim.diagnostic.goto_next()<cr>', opts)
-                vim.keymap.set('n', 'gi', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
+                vim.keymap.set('n', 'gk', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)
                 vim.keymap.set('n', '<leader>rr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
                 vim.keymap.set({ 'n', 'x' }, '<leader>fd', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
                 vim.keymap.set('n', '<leader>gg', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
@@ -115,3 +130,10 @@ return {
 
     }
 }
+
+
+--- TODO: look into emmet for rlly nice html completion
+
+
+
+
