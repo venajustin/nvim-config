@@ -1,23 +1,27 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    build = function()
-        require("nvim-treesitter.install").update({ with_sync = true })()
-    end,
-    config = function()
-        require("nvim-treesitter.configs").setup({
-            highlight = {
-                enable = true,
-	    },
-             ensure_installed = {
---                 "javascript",
---                 "c",
---                 "cpp",
---                 "lua",
---                 "markdown",
---                 "markdown_inline",
---                 "html",
---                 "css",
-             },
-        })
-    end,
+    branch = 'master',
+    lazy = false,
+    build = ":TSUpdate" 
 }
+--     build = function()
+--         require("nvim-treesitter.install").update({ with_sync = true })()
+--     end,
+--     config = function()
+--         require("nvim-treesitter.configs").setup({
+--             highlight = {
+--                 enable = true,
+-- 	    },
+--              ensure_installed = {
+-- --                 "javascript",
+-- --                 "c",
+-- --                 "cpp",
+-- --                 "lua",
+-- --                 "markdown",
+-- --                 "markdown_inline",
+-- --                 "html",
+-- --                 "css",
+--              },
+--         })
+--     end,
+-- }
