@@ -5,6 +5,12 @@ vim.keymap.set("n",  "<leader><leader><leader>", function() vim.cmd("so") end)
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- moving around regardless of current mode
+vim.keymap.set({"n","v","i","t"}, "<A-k>", "<C-\\><C-n><C-w>k")
+vim.keymap.set({"n","v","i","t"}, "<A-j>", "<C-\\><C-n><C-w>j")
+vim.keymap.set({"n","v","i","t"}, "<A-l>", "<C-\\><C-n><C-w>l")
+vim.keymap.set({"n","v","i","t"}, "<A-h>", "<C-\\><C-n><C-w>h")
+
 --tabs
 vim.keymap.set("n", "<C-w>tn", vim.cmd.tabnew)
 vim.keymap.set("n", "<C-w>tc", vim.cmd.tabclose)
