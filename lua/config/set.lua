@@ -21,3 +21,6 @@ vim.opt.undodir = vim.fn.stdpath('config') .. "\\undodir"
 vim.opt.undofile = true
 
 vim.cmd [[colorscheme wildcharm]]
+
+vim.opt.cmdheight = 0
+vim.opt.laststatus = 3
