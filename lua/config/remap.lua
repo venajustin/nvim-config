@@ -20,6 +20,9 @@ vim.keymap.set("n", "<C-w>to", vim.cmd.tabonly)
 vim.keymap.set("n", "<C-k>", "<C-u>") 
 vim.keymap.set("n", "<C-j>", "<C-d>")
 
+-- control k remap becuase used above
+vim.keymap.set("n", "<C-K>", vim.cmd.noh);
+
 -- delete to the right of cursor in insert (easier delete for macs)
 vim.keymap.set("i", "<C-L>", "<C-O>x")
 

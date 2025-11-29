@@ -20,10 +20,28 @@ return {
             "v",
             "<leader>pc",
             function() require("telescope.builtin").live_grep {
-                default_text = talbe.concat(get_selection())
+                default_text = table.concat(get_selection())
             }
         end,
         {desc = 'Telescope live grep with visual selection' }
-    )
+        )
+        vim.keymap.set(
+            "v",
+            "<leader>pf",
+            function() require("telescope.builtin").find_files {
+                default_text = table.concat(get_selection())
+            }
+        end,
+        {desc = 'Telescope live grep with visual selection' }
+        )
+        vim.keymap.set(
+            "v",
+            "<leader>pd",
+            function() require("telescope.builtin").git_files {
+                default_text = table.concat(get_selection())
+            }
+        end,
+        {desc = 'Telescope live grep with visual selection' }
+        )
     end,
 }

@@ -1,3 +1,9 @@
+---
+---
+--- Currently Disabled
+---
+---
+
 function SpellToggle()
     if vim.opt.spell:get() then
         vim.opt_local.spell = false
@@ -106,4 +112,5 @@ function status_line()
     }
 end
 
-vim.opt.statusline = "%!v:lua.status_line()"
+--- Disabled
+--- vim.opt.statusline = "%!v:lua.status_line()"
