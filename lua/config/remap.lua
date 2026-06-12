@@ -38,3 +38,11 @@ vim.keymap.set("n", "<leader>ln", function()
 end);
 
 
+-- playing around with having an ai keybind
+vim.keymap.set("n", "<leader>ai", function()
+    local input = vim.fn.input("Prompt: ")
+    vim.cmd.vsplit() 
+    vim.cmd.edit("model-output:" .. string.format("%15i",math.random(111111111111111,999999999999999)))
+    vim.cmd("r !".. "docker model run ai/llama3.2 `".. input .. "`" ) 
+end);
+
