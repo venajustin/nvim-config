@@ -41,3 +41,39 @@ vim.keymap.set("n", "<leader>ln", function()
 end);
 
 
+-- Toggle terminal
+vim.keymap.set({"n","v","i","t"}, "<A-t>", 
+    function() 
+        if vim.bo.buftype == "terminal" then
+            -- vim.cmd("bdelete!")
+            if #vim.api.nvim_tabpage_list_wins(0) == 1 then
+                vim.cmd("enew")
+            else 
+                vim.cmd("close")
+            end
+        else
+            
+            local tbuf = vim.g.terminal_hotkey_last
+            local newbuf = false
+            if not tbuf then
+                newbuf = true
+                tbuf = vim.api.nvim_create_buf(false, true)
+                vim.g.terminal_hotkey_last = tbuf
+            end
+
+            local wid = vim.fn.bufwinid(tbuf)
+            if wid == -1 then
+                vim.cmd("botright split")
+                vim.api.nvim_win_set_height(0, 10)
+                vim.api.nvim_win_set_buf(0, tbuf)
+            else
+                vim.api.nvim_set_current_win(wid)
+            end
+
+            if newbuf then
+                vim.cmd("term")
+            end
+            vim.cmd("startinsert")
+        end
+    end
+)
